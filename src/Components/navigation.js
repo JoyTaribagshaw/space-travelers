@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Navigation() {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Rockets</Link></li>
-        <li><Link to="/missions">Missions</Link></li>
-        <li><Link to="/myprofile">My profile</Link></li>
+        <li><NavLink to="/">Rockets</NavLink></li>
+        <li><NavLink to="/missions">Missions</NavLink></li>
+        <li><NavLink to="/myprofile">My profile</NavLink></li>
       </ul>
     </nav>
   );
