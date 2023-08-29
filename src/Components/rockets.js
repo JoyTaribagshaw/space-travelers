@@ -1,7 +1,6 @@
-function Rockets() {
-  return (
-    <h1>Rockets COmponenet</h1>
-  );
-}
-
+const Rockets = () => (
+  <ul className="container">
+    rockets
+  </ul>
+);
 export default Rockets;
