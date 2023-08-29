@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function Navigation() {
   return (
-    <nav>
+    <nav className="px-4 py-8">
       <ul>
         <li><NavLink to="/">Rockets</NavLink></li>
         <li><NavLink to="/missions">Missions</NavLink></li>
