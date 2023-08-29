@@ -10,9 +10,9 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={ <Rockets /> } />
-        <Route path="/missions" element={ <Missions /> } />
-        <Route path="/myprofile" element={ <Myprofile /> } />
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/myprofile" element={<Myprofile />} />
       </Routes>
     </>
   );
