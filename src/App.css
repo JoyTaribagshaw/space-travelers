@@ -6,6 +6,8 @@ a::after {
   box-sizing: border-box;
 }
 
+/* Rocket Styling */
+
 .rocket-container {
   display: flex;
   flex-direction: column;
