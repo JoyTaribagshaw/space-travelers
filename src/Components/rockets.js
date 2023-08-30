@@ -11,7 +11,7 @@ const Rockets = () => {
   }, [dispatch]);
 
   if (status) {
-    return <div className="loading">Loading, please wait...</div>;
+    return <div className="loading">Loading, please wait.....</div>;
   }
 
   if (error) {
