@@ -28,7 +28,7 @@ const Rockets = () => {
             <img src={rocket.flickr_images[0]} alt="" />
           </div>
           <div className="rocket-details">
-            <h1>{rocket.rocket_name}</h1>
+            <h1 className="name">{rocket.rocket_name}</h1>
             <p>{rocket.description}</p>
             <button className="reserve-btn" type="button">
               Reserve Rocket
