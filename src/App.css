@@ -63,3 +63,14 @@ a::after {
   color: #000;
   border: 1px solid #094c94;
 }
+
+.cancelation-btn {
+  height: 5vh;
+  width: 15vw;
+  background-color: #e43232;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.6s;
+  color: #fff;
+  cursor: pointer;
+}
