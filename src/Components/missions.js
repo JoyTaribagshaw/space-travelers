@@ -36,7 +36,7 @@ function Missions() {
           >
             <td className="font-bold px-1 border border-gray-300">{mission.mission_name}</td>
             <td className="pb-4 pt-1 px-2 border border-gray-300">{mission.description}</td>
-            <td className="px-2 border border-gray-300"><p style={{ backgroundColor: mission.reserved ? '#419bf9' : '#6d757d' }} className="p-2 rounded-md w-max text-white cursor-pointer">not a menber</p></td>
+            <td className="px-2 border border-gray-300"><p style={{ backgroundColor: mission.reserved ? '#419bf9' : '#6d757d' }} className="p-2 rounded-md w-max text-white cursor-pointer">{mission.reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</p></td>
             <td className="px-4">
               {mission.reserved && (
               <button
