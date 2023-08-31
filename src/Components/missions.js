@@ -1,23 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getmission, joiningMission, leavingMission } from '../redux/missions/missionsSlice';
+import { fetchMissions, joiningMission, leavingMission } from '../redux/missions/missionsSlice';
 
 function Missions() {
   const dispatch = useDispatch();
   const { missions, status, error } = useSelector((state) => state.missions);
 
-  const handleChange = (missionId, missionStatus) => {
-    if (missionStatus) {
-      dispatch(leavingMission(missionId));
-    } else {
-      dispatch(joiningMission(missionId));
-    }
-  };
-
   useEffect(() => {
     if (status === 'Data not loaded') {
-      dispatch(getmission());
+      dispatch(fetchMissions());
     }
   }, [dispatch]);
 
@@ -46,14 +38,26 @@ function Missions() {
             <td className="pb-4 pt-1 px-2 border border-gray-300">{mission.description}</td>
             <td className="px-2 border border-gray-300"><p style={{ backgroundColor: mission.reserved ? '#419bf9' : '#6d757d' }} className="p-2 rounded-md w-max text-white cursor-pointer">{mission.reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}</p></td>
             <td className="px-4">
+              {mission.reserved && (
               <button
                 type="button"
                 className="w-max px-4 py-2 border border-gray-400 rounded"
                 style={{ color: mission.reserved ? 'red' : '', border: mission.reserved ? '1px solid red' : '' }}
-                onClick={() => handleChange(mission.mission_id, mission.reserved)}
+                onClick={() => dispatch(leavingMission(mission.mission_id))}
               >
-                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                Leave Mission
               </button>
+              )}
+              {!mission.reserved && (
+              <button
+                type="button"
+                className="w-max px-4 py-2 border border-gray-400 rounded"
+                style={{ color: mission.reserved ? 'red' : '', border: mission.reserved ? '1px solid red' : '' }}
+                onClick={() => dispatch(joiningMission(mission.mission_id))}
+              >
+                Join Mission
+              </button>
+              )}
             </td>
           </tr>
         ))}
