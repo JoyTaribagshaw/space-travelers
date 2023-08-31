@@ -29,12 +29,14 @@ const Rockets = () => {
           </div>
           <div className="rocket-details">
             <h1 className="name">{rocket.rocket_name}</h1>
-            {rocket.reserved ? (
-              <span className="reserved">Reserved</span>
-            ) : (
-              null
-            )}
-            <p>{rocket.description}</p>
+            <p>
+              {rocket.reserved ? (
+                <span className="reserved">Reserved</span>
+              ) : (
+                null
+              )}
+              {rocket.description}
+            </p>
             {rocket.reserved && (
               <button
                 type="button"
