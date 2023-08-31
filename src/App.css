@@ -123,7 +123,7 @@ a::after {
 
 .my-missions ul li {
   padding: 0.5rem 15rem 1.6rem 1rem;
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .my-missions ul li:last-child {
