@@ -16,7 +16,6 @@ const rocketsSlice = createSlice({
   name: 'Rockets',
   initialState,
   reducers: {},
-  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRockets.pending, (state) => {

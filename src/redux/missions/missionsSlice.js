@@ -13,7 +13,6 @@ export const getmission = createAsyncThunk('misson/getmission', async () => {
   }
 });
 
-
 const missionsslice = createSlice({
   name: 'missionData',
   initialState: {
@@ -24,7 +23,7 @@ const missionsslice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(getmission.fulfilled, (state, action) => {
-        state.status = 'Date Loeaded'
+        state.status = 'Date Loeaded';
         state.missions = action.payload;
       });
   },
