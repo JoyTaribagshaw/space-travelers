@@ -18,19 +18,6 @@ function Missions() {
     );
   }
 
-  //   .missions-table {
-  //   width: 80%;
-  //   border-collapse: collapse;
-  //   margin: 20px auto;
-  //   padding: 10px;
-  // }
-
-  // .missions-table th,
-  // .missions-table td {
-  //   border: 1px solid #ddd;
-  //   padding: 8px;
-  // }
-
   return (
     <table className="w-11/12 my-5 mx-auto border-collapse p-2 ">
       <thead className="border border-gray-300">
