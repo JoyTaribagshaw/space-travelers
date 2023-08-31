@@ -1,19 +1,12 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable max-len */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { createSelector } from 'reselect';
 
 const url = 'https://api.spacexdata.com/v3/missions';
 
 // get missions
-export const getmission = createAsyncThunk('misson/getmission', async () => {
-  try {
-    const responce = await axios.get(url);
-    return responce.data;
-  } catch (error) {
-    throw new Error('did not load data');
-  }
+export const fetchMissions = createAsyncThunk('misson/getmission', async () => {
+  const rockets = await fetch(url);
+  const data = await rockets.json();
+  return data;
 });
 
 const missionsslice = createSlice({
@@ -25,34 +18,29 @@ const missionsslice = createSlice({
   },
   reducers: {
     joiningMission: (state, action) => {
-      const missionId = action.payload;
-      state.data = state.data.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: true } : mission));
+      const id = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== id) {
+          return mission;
+        }
+        return { ...mission, reserved: true };
+      });
     },
     leavingMission: (state, action) => {
-      const missionId = action.payload;
-      state.data = state.data.map((mission) => (mission.mission_id === missionId ? { ...mission, reserved: false } : mission));
+      const id = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== id) return mission;
+        return { ...mission, reserved: false };
+      });
     },
   },
   extraReducers(builder) {
     builder
-      .addCase(getmission.fulfilled, (state, action) => {
+      .addCase(fetchMissions.fulfilled, (state, action) => {
         state.status = 'Date Loeaded';
         state.missions = action.payload;
       });
   },
 });
-
-export const MissionsData = (state) => state.missions.data;
-
-export const selectMappedMissions = createSelector(
-  [MissionsData],
-  (data) => data.map((mission) => ({
-    mission_id: mission.mission_id,
-    mission_name: mission.mission_name,
-    description: mission.description,
-    reserved: mission.reserved || false, // Default reserved status
-  })),
-);
-
 export const { joiningMission, leavingMission } = missionsslice.actions;
 export default missionsslice.reducer;
