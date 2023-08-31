@@ -74,3 +74,13 @@ a::after {
   color: #fff;
   cursor: pointer;
 }
+
+.reserved {
+  background-color: #68c1d0;
+  color: #fff;
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 4px;
+  width: 15%;
+  text-align: center;
+}
