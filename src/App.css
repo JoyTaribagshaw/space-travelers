@@ -8,6 +8,10 @@ a::after {
 
 /* Rocket Styling */
 
+.link:active {
+  border-bottom: 1px solid black;
+}
+
 .name {
   font-weight: 600;
 }
@@ -66,13 +70,19 @@ a::after {
 
 .cancelation-btn {
   height: 5vh;
-  width: 15vw;
-  background-color: #e43232;
+  width: 12vw;
+  background-color: #fff;
   border-radius: 5px;
-  padding: 10px;
+  border: 1px solid black;
+  padding: 8px;
   transition: 0.6s;
-  color: #fff;
+  color: black;
   cursor: pointer;
+}
+
+.cancelation-btn:hover {
+  background-color: red;
+  color: #fff;
 }
 
 .reserved {
@@ -83,4 +93,39 @@ a::after {
   padding: 4px;
   width: 15%;
   text-align: center;
+}
+
+/* My profile styling */
+
+.profile {
+  padding: 2rem;
+  display: flex;
+  flex: 2;
+}
+
+.my-missions {
+  flex: 2;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.my-missions ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.my-missions ul li {
+  padding: 0.5rem 15rem 1.6rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.my-missions ul li:last-child {
+  border-bottom: none;
 }
