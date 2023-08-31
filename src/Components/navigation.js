@@ -9,9 +9,9 @@ function Navigation() {
         <h1 className="text-black text-lg">Space Travelers Hub</h1>
       </div>
       <ul className="flex gap-4 border-b-slate-400">
-        <li><NavLink to="/">Rockets</NavLink></li>
-        <li><NavLink to="/missions">Missions</NavLink></li>
-        <li><NavLink to="/myprofile">My profile</NavLink></li>
+        <li className="link"><NavLink to="/">Rockets</NavLink></li>
+        <li className="link"><NavLink to="/missions">Missions</NavLink></li>
+        <li className="link"><NavLink to="/myprofile">My profile</NavLink></li>
       </ul>
     </nav>
   );
