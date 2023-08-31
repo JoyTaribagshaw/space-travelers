@@ -1,10 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getmission } from '../redux/missions/missionsSlice';
+import { getmission, joiningMission, leavingMission } from '../redux/missions/missionsSlice';
 
 function Missions() {
   const dispatch = useDispatch();
   const { missions, status, error } = useSelector((state) => state.missions);
+
+  const handleChange = (missionId, missionStatus) => {
+    if (missionStatus) {
+      dispatch(leavingMission(missionId));
+    } else {
+      dispatch(joiningMission(missionId));
+    }
+  };
 
   useEffect(() => {
     if (status === 'Data not loaded') {
@@ -41,6 +50,7 @@ function Missions() {
                 type="button"
                 className="w-max px-4 py-2 border border-gray-400 rounded"
                 style={{ color: mission.reserved ? 'red' : '', border: mission.reserved ? '1px solid red' : '' }}
+                onClick={() => handleChange(mission.mission_id, mission.reserved)}
               >
                 {mission.reserved ? 'Leave Mission' : 'Join Mission'}
               </button>
