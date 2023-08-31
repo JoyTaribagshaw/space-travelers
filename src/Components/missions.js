@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getmission } from '../redux/missions/missionsSlice';
-import { getmission } from '../redux/missions/missionsSlice';
+import { getmission, joiningMission, leavingMission } from '../redux/missions/missionsSlice';
 
 function Missions() {
   const dispatch = useDispatch();
