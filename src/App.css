@@ -1,39 +1,65 @@
-.App {
-  text-align: center;
+*,
+*::before,
+a::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Rocket Styling */
+
+.name {
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.rocket-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 5px 35px;
+  padding-top: 20px;
+  gap: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.rocket-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-family: sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.image {
+  flex: 1;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.image img {
+  width: 100%;
+}
+
+.rocket-details {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details p {
+  padding-right: 5px;
+}
+
+.reserve-btn {
+  width: 10vw;
+  height: 5vh;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.5s;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #094c94;
 }
