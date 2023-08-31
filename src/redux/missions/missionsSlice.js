@@ -19,19 +19,19 @@ const missionsslice = createSlice({
   reducers: {
     joiningMission: (state, action) => {
       const id = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (mission.id !== id) return mission;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== id) {
+          return mission;
+        }
         return { ...mission, reserved: true };
       });
-      state.missions = newState;
     },
     leavingMission: (state, action) => {
       const id = action.payload;
-      const newState = state.missions.map((mission) => {
-        if (mission.id !== id) return mission;
+      state.missions = state.missions.map((mission) => {
+        if (mission.mission_id !== id) return mission;
         return { ...mission, reserved: false };
       });
-      state.missions = newState;
     },
   },
   extraReducers(builder) {
