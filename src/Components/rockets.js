@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets, cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 
 const Rockets = () => {
-  const { rockets, status, error } = useSelector((state) => state.rockets);
+  const { rockets, loading, error } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (loading) {
+      dispatch(fetchRockets());
+    }
   }, [dispatch]);
 
-  if (status) {
+  if (loading) {
     return <div className="loading">Loading, please wait.....</div>;
   }
 
