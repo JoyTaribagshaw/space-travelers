@@ -28,8 +28,6 @@
 
 **Space Travellers' Hub** is a single-page application (SPA) built with React that uses real-time data from the SpaceX API. Users can book rockets and join selected space missions, and the selected services are displayed on the user's profile page.
 
-The project is built with various programming tools such as React, JSX, CSS, and JavaScript. It is also deployed on Netifly, so you can try it out by visiting the live demo.
-
 ## 🛠 Built With <a name="built-with"></a>
 * React
 * JSX
