@@ -119,8 +119,8 @@ Launch the app with the following command
 
 👤 *Shah Zaman*
 
-- GitHub: [Joy](https://github.com/sheezu900)
-- LinkedIn: [Joy](https://www.linkedin.com/in/shahzaman900/)
+- GitHub: [Shah Zaman](https://github.com/sheezu900)
+- LinkedIn: [Shah Zaman](https://www.linkedin.com/in/shahzaman900/)
 
 
 
