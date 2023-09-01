@@ -1,70 +1,172 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<!-- TABLE OF CONTENTS -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Space Travelers' Hub
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Run tests](#run-tests)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Space Travellers' Hub <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Space Travellers' Hub** is a single-page application (SPA) built with React that uses real-time data from the SpaceX API. Users can book rockets and join selected space missions, and the selected services are displayed on the user's profile page.
 
-### `npm test`
+## 🛠 Built With <a name="built-with"></a>
+* React
+* JSX
+* CSS
+* Javascript ES6
+* Visual Studio Code
+* Jest
+* React Testing Library
+* ESLint
+* Stylelint
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Features -->
 
-### `npm run build`
+### Key Features <a name="key-features"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> The three key features of this project include the following.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Book SpaceX rockets and dragons, cancel the previously made booking.**
+- **Join SpaceX space missions, leave the mission the user he/she has joined earlier.**
+- **View all reserved rockets, space missions, and dragons.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+<!-- GETTING STARTED -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻 Getting Started <a name="getting-started"></a>
+Get ready to explore Space Travellers' Hub with these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites <a name="prerequisites"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure you have:
+ - A Web Browser such as Microsoft Edge or Google Chrome 🌐
+ - Git 🐙
+ - A code editor such as Visual Studio Code 👨‍💻
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup <a name="setup"></a>
 
-## Learn More
+Use `git clone` to get your local copy of the project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/JoyTaribagshaw/space-travelers.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Install <a name="install"></a>
 
-### Code Splitting
+ Run `npm install` to set up the required packages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+### Run Tests <a name="run-tests"></a>
+To run tests run the following command in your terminal
+```
+ npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Currently, there are no test scripts available, but the libraries (React Testing Library and Jest) are set up.
 
-### Making a Progressive Web App
+You can also check linter errors by running this commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npx stylelint "**/*.{css,scss}"
+```
 
-### Advanced Configuration
+```
+npx eslint "**/*.{js,jsx}"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Usage <a name="usage"></a>
 
-### Deployment
+Launch the app with the following command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+  npm start
+```
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 *Joy Tari*
+
+- GitHub: [Joy](https://github.com/JoyTaribagshaw)
+- Twitter: [Joy](https://twitter.com/JoyTariBagshaw)
+- LinkedIn: [Joy](www.linkedin.com/in/joytaribagshaw)
+
+👤 *Shah Zaman*
+
+- GitHub: [Shah Zaman](https://github.com/sheezu900)
+- LinkedIn: [Shah Zaman](https://www.linkedin.com/in/shahzaman900/)
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Here are some future features that could be added to the Space Travellers' Hub app in the future.
+
+- **User authentication and authorization:** This would allow users to create accounts, sign in and out, and have their own personal items.
+
+These are just a few ideas for future features that could be added to the Space Travellers' Hub app. The specific features that are added will depend on the needs and wants of the users.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/JoyTaribagshaw/space-travelers/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a star⭐️ or a thumbs up 👍 if you like this project! You can visit my GitHub profile for more of my projects.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- Project supervised by [Microverse](https//www.microverse.org/)
+- [Creative Commons 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
